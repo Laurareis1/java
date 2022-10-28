@@ -28,14 +28,18 @@ function compara (lista,operacao){
        
     else if (operacao =='-'){
         for( value of lista){
-            total -=value;
+            if(pos==0)
+            continue;
+            total -=value[pos];
         }
 
     }
     
     else if (operacao == '*'){
-        for( value of lista){
-            total *=value;
+        for( value in lista){
+            if(pos==0)
+            continue;
+            total *=value[pos];
         }
 
     }
