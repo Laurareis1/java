@@ -17,7 +17,7 @@ function myConcat(lista,parametro) {
     return lista;
 }
 
-function compara (lista,operacao){
+function calculo (lista,operacao){
     let total = 0;
     if(operacao == '+'){
         for( value of lista){
@@ -41,10 +41,60 @@ function compara (lista,operacao){
             continue;
             total *=value[pos];
         }
-
     }
     return total;
 }
+
+function listCalculo (num1,num2,parametro) {
+    let total=0;
+    if(parametro == '+'){
+     total = num1 + num2;
+        }
+         else if(parametro == '-'){
+            total = num1 - num2;
+        }
+        else if (parametro == '*'){
+            total = num1 * num2;
+        }
+        else (parametro == '/')
+         total = num1 / num2;
+        
+  return total;
+}
+ 
+function procurarNum (number){
+    let phoneBook={
+        Abel :5802943,
+        Laura : 9761405,
+        Lisa : 5850628,
+        Adilson : 9240912,
+        Victor : 9519228
+    };
+ for(key in phoneBook){
+   const savedPhoneNumber = phoneBook[key]
+    if(savedPhoneNumber== number)
+          return key;
+    
+ }
+}
+
+function procurarNom (name){
+    let phoneBook={
+        Abel :5802943,
+        Laura : 9761405,
+        Lisa : 5850628,
+        Adilson : 9240912,
+        Victor : 9519228
+    };
+    for (key in phoneBook){
+        const saveName = key
+        if(saveName == name)
+       return saveName ; 
+    }
+}
+
+    
+
 
 
 
