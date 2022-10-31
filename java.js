@@ -230,17 +230,19 @@ function contarVogal(palavra){
     let total=0;
     let vogais ="aeiouAEIOU";
     let i=0;
-    let j=0;
+    //let j=0;
     for(; 
-        i < palavra.length;
+        i <palavra.length;
          i++){
-            for(;
-                j<vogais.length;
-                i++){
-                if (vogais[j]==palavra[i]){
+            //for(;
+              //  j<vogais.length;
+              //  i++){
+                if (vogais.indexOf(palavra[i])!==-1){
                     total++
             }
         }
-        }
+        
         return total;
 }
+
+
