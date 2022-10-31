@@ -209,3 +209,38 @@ function todos(name,number,operacao,phoneBook){
     else if(operacao== 'pesquisar')
      return pesquisar1 (name,phoneBook);
 }
+
+function Divide(name){
+     let count =0
+ for(;count<name.length;
+    count++){
+     console.log(name[count])
+    }
+  }
+
+function aucontrario (name){
+    let count= name.length-1
+    for(;count>=0;
+        count--){
+            console.log(name[count])
+        }
+}
+
+function contarVogal(palavra){
+    let total=0;
+    let vogais ="aeiouAEIOU";
+    let i=0;
+    let j=0;
+    for(; 
+        i < palavra.length;
+         i++){
+            for(;
+                j<vogais.length;
+                i++){
+                if (vogais[j]==palavra[i]){
+                    total++
+            }
+        }
+        }
+        return total;
+}
