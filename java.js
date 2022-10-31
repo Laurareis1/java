@@ -92,10 +92,59 @@ function procurarNom (name){
        return saveName ; 
     }
 }
+function giveMePhoneNumber(name) {
+    let phoneBook = {
+        Abel: 5802943,
+        Laura: 9761405,
+        Lisa: 5850628,
+        Adilson: 9240912,
+        Victor: 9519228
+    }
+    for (key in phoneBook) {
+        // console.log(key, phoneBook[key]);
+        const savedName = key;
+        const savedPhoneNumber = phoneBook[key];
+        
+        if(savedName == name)
+            return savedPhoneNumber;
+    }
+    return 'The name '+name+ ' is not registered!';
 
-    
+}
 
 
 
+function giveMePhone(name) {
+    let phoneBook = {
+        Abel: 5802943,
+        Laura: 9761405,
+        Lisa: 5850628,
+        Adilson: 9240912,
+        Victor: 9519228
+    }
+        return phoneBook[name];
+}
 
+function AddPhoneNumber(name, number){
+    let phoneBook = {
+        Abel: 5802943,
+        Laura: 9761405,
+        Lisa: 5850628,
+        Adilson: 9240912,
+        Victor: 9519228
+    }
+phoneBook[name] = number
+    return phoneBook
+}
+function eliminar (name){
+    let phoneBook = {
+        Abel: 5802943,
+        Laura: 9761405,
+        Lisa: 5850628,
+        Adilson: 9240912,
+        Victor: 9519228
+    }
+    delete phoneBook[name];
+    return phoneBook
 
+}
