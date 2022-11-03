@@ -90,14 +90,55 @@ return data;
 }
 
 function time1 (se){
-  const meses = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   let da= new Date();
   let dia= da.getDay();
   let year= da.getFullYear();
- // let mes=Intl.DateTimeFormat('en-US', options).format(Xmas95);
-  let mes = meses[da.getMonth()];
+  let mes=da.toLocaleString('default', { month: 'long' });
   let data= dia+se+mes+se+year;
   return data;
   }
 
+  function time2 (se){
+     const meses = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+     let da= new Date();
+     let dia= da.getDay();
+     let year= da.getFullYear();
+     let mes = meses[da.getMonth()];
+     let data= dia+se+mes+se+year;
+     return data;
+     }
+   
+     function comparaDatas(data1,data2){
+     //let dat= Date.parse(data1);
+     //let da= Date.parse(data2);
+     
+     if(data1==data2){
+       return "as duas datas sao iguais";
+     }
+     else if (data1 < data2){
+       return "a primeira data é maior";
+     }
+     else if(data1> data2){
+       return "a segunda data inseria é maior";
+     } 
+     }
+
+     function data(date1,date2){
+     let dat1=  setDate (date1)
+     let dat2 = setDate (date2)
+
+      if(dat1 ==dat2){
+        return "as duas datas sao iguais";
+      }
+      else if (dat1 < dat2){
+        return "a primeira data é maior";
+      }
+      else if(dat1> dat2){
+        return "a segunda data inseria é maior";
+      } 
+     }
+
+
+
+     
   
