@@ -80,3 +80,24 @@ function chunkString1 (str,num=1) {
   return r
 }
 
+function time (se){
+let da= new Date();
+let dia= da.getDay();
+let year= da.getFullYear();
+let mes= da.getMonth()+1;
+let data= dia+se+mes+se+year;
+return data;
+}
+
+function time1 (se){
+  const meses = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  let da= new Date();
+  let dia= da.getDay();
+  let year= da.getFullYear();
+ // let mes=Intl.DateTimeFormat('en-US', options).format(Xmas95);
+  let mes = meses[da.getMonth()];
+  let data= dia+se+mes+se+year;
+  return data;
+  }
+
+  
